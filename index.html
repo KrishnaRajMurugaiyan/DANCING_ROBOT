@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<style>
+#total
+{
+    height: 17cm;
+    width: 100%;
+    background-color: aqua;
+}
+.head
+{
+    margin-left: 11cm;
+    position: relative;
+    top: 2cm;
+    height: 40px;
+    width: 90px;
+    background-color: darkviolet;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    transform: scale(2,3);
+}   
+    #eyes1,#eyes2
+    {
+        position: relative;
+        background-color:white;
+        height: 10px;
+        width: 10px;
+        border-radius: 100px;
+    }
+    #eyes1
+    {
+        top: 0.6cm;
+        left: 1cm;
+        background-color: white;
+        border:1px solid black;
+    }
+    #eyes2
+    {
+        background-color: white;
+        top: 0.35cm;
+        left: 0.2cm;
+        border:1px solid black;
+    }
+    #total:hover .head {
+    animation: movehead 2s infinite;
+  }
+  
+@keyframes movehead
+{
+    0%{width:100px;}
+    25%{width:120px;}
+    50%{width:100px;}
+    75%{width:120px;}
+    100%{width:100px;}
+}
+
+.body
+{
+    height: 4cm;
+    width: 180px;
+    background-color: darkviolet;
+    position: relative;
+    left: 9.8cm;
+    top: 3.5cm;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    transition: border-radius 1s;
+}
+
+@keyframes bodymove 
+{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+#total:hover .body
+{
+    border-radius: 40%;
+    animation: bodymove 2s infinite;
+}
+
+.lefthand
+{
+    height: 3.5cm;
+    width: 1cm;
+    background-color:darkviolet;
+    border-radius:50px;
+    position: relative;
+    left:8.4cm;
+}
+#total:hover .lefthand
+{
+    animation: leftmove 2s infinite;
+}
+@keyframes leftmove
+{
+    0%{transform: rotate(0deg);
+        transform-origin: top center;}
+    25%{transform: rotate(90deg);
+        transform-origin: top center;}
+    50%{transform: rotate(0deg);
+        transform-origin: top center;}
+    75%{transform: rotate(90deg);
+        transform-origin: top center;}
+    100%{transform: rotate(0deg);
+        transform-origin: top center;}
+}
+.righthand
+{
+    height: 3.5cm;
+    width: 1cm;
+    background-color:darkviolet;
+    border-radius:50px;
+    position: relative;
+    top:-3.5cm;
+    left:15cm;
+}
+#total:hover .righthand
+{
+    animation: rightmove 2s infinite;
+}
+@keyframes rightmove
+{
+    0%{transform: rotate(0deg);
+       transform-origin: top center;}
+    25%{transform: rotate(-90deg);
+        transform-origin: top center;}
+    50%{transform: rotate(0deg);
+        transform-origin: top center;}
+    75%{transform: rotate(-90deg);
+        transform-origin: top center;}
+    100%{transform: rotate(0deg);
+        transform-origin: top center;}
+}
+.leftleg
+{
+    height: 3.5cm;
+    width: 1cm;
+    background-color:darkviolet;
+    border-radius:50px;
+    position: relative;
+    top:-4cm;
+    left:10.7cm;
+    
+}
+ #total:hover .leftleg
+{
+    animation: leftlegmove 2s infinite;
+} 
+@keyframes leftlegmove
+{
+    0%{transform: rotate(0deg);
+       transform-origin: top center;}
+    25%{transform: rotate(20deg);
+        transform-origin: top center;}
+    50%{transform: rotate(0deg);
+        transform-origin: top center;}
+    75%{transform: rotate(20deg);
+        transform-origin: top center;}
+    100%{transform: rotate(0deg);
+        transform-origin: top center;}
+} 
+.rightleg
+{
+    height: 3.5cm;
+    width: 1cm;
+    background-color:darkviolet;
+    border-radius:50px;
+    position: relative;
+    top:-7.5cm;
+    left:12.5cm;
+}
+#total:hover .rightleg
+{
+    animation: rightlegmove 2s infinite;
+} 
+@keyframes rightlegmove
+{
+    0%{transform: rotate(0deg);
+        transform-origin: top center;}
+    25%{transform: rotate(-20deg);
+        transform-origin: top center;}
+    50%{transform: rotate(0deg);
+        transform-origin: top center;}
+    75%{transform: rotate(-20deg);
+        transform-origin: top center;}
+    100%{transform: rotate(0deg);
+        transform-origin: top center;}
+}
+</style>
+<body>
+
+<div id="total">
+    <marquee behavior="" direction="" style="font-size: 20px;" class="name">DANCING _ROBOT</marquee>
+    <div class="head">
+        <div id="eyes1"></div>
+        <div id="eyes2"></div>
+    </div>
+    <div class="body"></div>
+
+    <div class="lefthand">
+    </div>
+    <div class="righthand">
+    </div>
+    <div class="leftleg">
+    </div>
+    <div class="rightleg">
+    </div>
+</div>
+
+</body>
+</html>
